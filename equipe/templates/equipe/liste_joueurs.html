@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2 class="mb-4">👥 Liste des joueurs</h2>
+
+  <table class="table table-striped table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Nom</th>
+        <th>Poste</th>
+        <th>Numéro</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for joueur in joueurs %}
+        <tr>
+          <td>{{ joueur.nom }}</td>
+          <td>{{ joueur.poste }}</td>
+          <td>{{ joueur.numero }}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="3">Aucun joueur enregistré.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
