@@ -3,11 +3,8 @@ services:
     name: sama-club
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn sama_club.wsgi:application
+    startCommand: gunicorn wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: sama_club.settings
-      - key: SECRET_KEY
-        generateValue: true
-      - key: PYTHON VERSION
-        value: 3.10
+

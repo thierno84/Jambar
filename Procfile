@@ -1,4 +1,4 @@
-web: gunicorn sama_club.wsgi:application
+web: gunicorn wsgi:application
 
 
 
